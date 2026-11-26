@@ -44,3 +44,5 @@ def get_vehicle_count(vehicle_type, area, category, euro_standard):
         print(f"There are {count} {vehicle_type} vehicles in {area} (Category: {category}, Euro std: {euro_standard}).")
     except KeyError:
         print("Sadly, we don't have data for that specific combination.")
+
+
