@@ -1,0 +1,31 @@
+# Toy nested dictionary data using direct shorthand keys
+vehicles = {
+    "moto": {
+        "ITALIA NORD-OCCIDENTALE": {
+            "Fino a 125": {"0": 198580, "1": 48882},
+            "126 - 250": {"0": 134064, "1": 60332},
+            "251 - 750": {"0": 178233, "1": 55234},
+            "Oltre 750": {"0": 51039, "1": 39103}
+        },
+        "ITALIA NORD-ORIENTALE": {
+            "Fino a 125": {"0": 159880, "1": 38063},
+            "126 - 250": {"0": 95346, "1": 36822},
+            "251 - 750": {"0": 135378, "1": 38650},
+            "Oltre 750": {"0": 43082, "1": 35582}
+        }
+    },
+    "bus": {
+        "ITALIA NORD-OCCIDENTALE": {
+            "Noleggio": {"0": 240, "1": 51, "5B": 120, "6B": 45},
+            "Privato": {"0": 433, "1": 83},
+            "Pubblico": {"0": 404, "1": 31},
+            "Altri usi": {"0": 53, "1": 2}
+        },
+        "ITALIA NORD-ORIENTALE": {
+            "Noleggio": {"0": 270, "1": 81},
+            "Privato": {"0": 278, "1": 59},
+            "Pubblico": {"0": 272, "1": 19},
+            "Altri usi": {"0": 19, "1": 7}
+        }
+    }
+}
