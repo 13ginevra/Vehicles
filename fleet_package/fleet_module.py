@@ -44,13 +44,14 @@ def get_top_vehicle_counts_by_euro_limit(vehicle_type, max_euro_standard, top_n)
     If fewer than top_n records match, all of them are printed.
     """
 
-    limit = euro_rank(max_euro_standard)
+    # "5B" -> (5, "B"), "1" -> (1, ""): so "5" < "5B" < "6"
+    limit = (int(max_euro_standard[0]), max_euro_standard[1:])
     records = []
 
     for area, categories in vehicles[vehicle_type].items():
         for category, counts in categories.items():
             for standard, count in counts.items():
-                if euro_rank(standard) <= limit:
+                if (int(standard[0]), standard[1:]) <= limit:
                     records.append((count, area, category, standard))
 
     records.sort(reverse=True)  # the count is first, so it sorts by count
